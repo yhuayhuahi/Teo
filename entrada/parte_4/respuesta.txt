@@ -1,0 +1,17 @@
+* ¿Qué son los estándares de codificación?
+
+Los estandares de códificación, son reglas establecidas orientadas a seguir buenas practicas al momento de escribir código, de modo que todos puedan seguirlas haciendo que escribir código sea mas sencillo
+
+* ¿Quién es considerado en padre de la Programación Orientada a Objetos?
+
+El padre de la Programación Orientada a Objetos es generalmente considerado Alan Kay
+
+* ¿Qué diferencia hay entre un editor de texto plano y un editor de texto enriquecido?
+
+Un editor de texto plano, es el que permite editar cualquier tipo de archivo que tenga en su contenido texto, código, o en su defecto archivos binarios, sin embargo, son basicos en funcionalidades.
+
+Por otro lado, un edito de texto enriquesido, como ejemplo tenemos a los IDE's, usualmente estan especializados para ciertos lenguajes o áreas de desarrollo, estas tienen el objetivo de facilitar el desarrollo de software, brindando herramientas que se prestan para lograr el objetivo. Por ejemplo el autocompletado, extensiones, IA, y demas caracteristicas.
+
+❑ ¿Cúal usar [TABS] o [ESPACIOS] para la identación de sus programas?
+
+Es claro que usar TABS, sobre todo en editores enriquesidos, ya tienen establecido una cierta cantidad de espacios, dependiendo de una configuración personal o por defecto, son solo un clic podemos establecer el espaciado necesario.

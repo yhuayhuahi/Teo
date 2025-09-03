@@ -1,0 +1,14 @@
+* ¿Cómo le proveemos al Sistema Operativo de un compilador C++? (MSWindows o GNU/Linux).
+
+Primero se debe instalar dicho programa, puede ser de un lenguaje de programación(c++, java, node), en este caso para usarlo es necesario que el ejecutable este conectado al $PATH
+
+* En la terminal del sistema operativo, usted se encuentra en el directorio donde están ubicados ’student.cpp’ y ’me.cpp’.Ingrese los comandos necesario para compilar su programa con el nombre ’me.exe’ o ’me.out’.
+
+El comando es el siguiente:
+g++ me.cpp student.cpp -o me.exe
+
+Si en el programa se usa theads se añade el parametro -pthread
+
+* ¿Cómo ejecuta su programa desde la terminal?
+
+Una vez se tiene el ejecutable con los permisos necesarios
