@@ -1,11 +1,21 @@
 package com.tuorg.poo.clases;
 public class Persona {
-    String nombre;
-    int edad;
+    private String id; //DNI en nuestro caso
+    private String nombre;
+    private int edad;
 
-    public Persona(String nombre, int edad) {
+    public Persona(String id, String nombre, int edad) {
+        this.id = id;
         this.nombre = nombre;
         this.edad = edad;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {

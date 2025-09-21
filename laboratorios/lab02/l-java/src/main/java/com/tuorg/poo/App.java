@@ -6,18 +6,18 @@ public class App {
         System.out.println("=== SISTEMA UNIVERSITARIO ===\n");
         
         // 1. Crear 2 profesores
-        Profesor profesor1 = new Profesor("Dr. García", 45);
-        Profesor profesor2 = new Profesor("Dra. Martínez", 38);
+        Profesor profesor1 = new Profesor("29386481","Dr. García", 45);
+        Profesor profesor2 = new Profesor("29386489","Dra. Martínez", 38);
         
         System.out.println("Profesores creados:");
         System.out.println("- " + profesor1.getNombre() + ", " + profesor1.getEdad() + " años");
         System.out.println("- " + profesor2.getNombre() + ", " + profesor2.getEdad() + " años\n");
         
         // 2. Crear 3 estudiantes
-        Estudiante estudiante1 = new Estudiante("Ana López", 20);
-        Estudiante estudiante2 = new Estudiante("Carlos Ruiz", 22);
-        Estudiante estudiante3 = new Estudiante("María González", 19);
-        
+        Estudiante estudiante1 = new Estudiante("12345678","Ana López", 20);
+        Estudiante estudiante2 = new Estudiante("87654321","Carlos Ruiz", 22);
+        Estudiante estudiante3 = new Estudiante("11223344","María González", 19);
+
         System.out.println("Estudiantes creados:");
         System.out.println("- " + estudiante1.getNombre() + ", " + estudiante1.getEdad() + " años");
         System.out.println("- " + estudiante2.getNombre() + ", " + estudiante2.getEdad() + " años");

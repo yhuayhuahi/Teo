@@ -1,10 +1,10 @@
 package com.tuorg.poo.clases;
 
 public class Curso {
-    String id;
-    String nombre;
+    private String id;
+    private String nombre;
     // Composicion: Un curso tiene un horario
-    Horario horario;
+    private Horario horario;
 
     public Curso(String id, String nombre, Horario horario) {
         this.id = id;
