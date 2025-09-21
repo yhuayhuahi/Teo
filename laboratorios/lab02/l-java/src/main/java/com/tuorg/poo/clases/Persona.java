@@ -1,3 +1,4 @@
+package com.tuorg.poo.clases;
 public class Persona {
     String nombre;
     int edad;

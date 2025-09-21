@@ -1,8 +1,9 @@
-package Composicion_y_Agregacion;
+package com.tuorg.poo.clases;
 
 public class Curso {
     String id;
     String nombre;
+    // Composicion: Un curso tiene un horario
     Horario horario;
 
     public Curso(String id, String nombre, Horario horario) {

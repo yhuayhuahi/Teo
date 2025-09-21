@@ -1,4 +1,4 @@
-package Composicion_y_Agregacion;
+package com.tuorg.poo.clases;
 
 public class Horario {
     String dia;

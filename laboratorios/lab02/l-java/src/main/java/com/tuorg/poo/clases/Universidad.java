@@ -1,8 +1,9 @@
-package Composicion_y_Agregacion;
+package com.tuorg.poo.clases;
 import java.util.ArrayList;
 
 public class Universidad {
     String nombre;
+    // Agregacion: Una universidad tiene muchos cursos
     ArrayList<Curso> cursos;
 
     public Universidad(String nombre) {
