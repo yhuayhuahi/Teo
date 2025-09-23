@@ -34,4 +34,8 @@ export class Curso {
       this.#horario = horario
     }
   }
+
+  toString() {
+    return `Curso{id='${this.#id}', nombre='${this.#nombre}', horario=${this.#horario}}`
+  }
 }

@@ -31,4 +31,8 @@ export class Horario {
   set horaFin(horaFin) {
     this.horaFin = horaFin;
   }
+
+  toString() {
+    return `Horario{dia='${this.dia}', horaInicio='${this.horaInicio}', horaFin='${this.horaFin}'}`
+  }
 }

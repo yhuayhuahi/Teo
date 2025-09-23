@@ -30,4 +30,8 @@ export class Persona {
   set edad(edad) {
     this.#edad = edad
   }
+
+  toString() {
+    return `Persona{id='${this.#id}', nombre='${this.#nombre}', edad=${this.#edad}}`
+  }
 }

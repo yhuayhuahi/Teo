@@ -33,10 +33,10 @@ const horario2 = new Horario('Miércoles', '14:00', '16:00')
 const curso2 = new Curso("MAT201", "Matemáticas Discretas", horario2)
 
 console.log('Cursos creados:')
-console.log('- ' + curso1.nombre + ' (' + curso1.codigo + '), ' + curso1.horario.dia + ' ' + curso1.horario.horaInicio + '-' + curso1.horario.horaFin)
-console.log('- ' + curso2.nombre + ' (' + curso2.codigo + '), ' + curso2.horario.dia + ' ' + curso2.horario.horaInicio + ' a ' + curso2.horario.horaFin + '\n')
+console.log('- ' + curso1.nombre + ' (' + curso1.id + '), ' + curso1.horario.dia + ' ' + curso1.horario.horaInicio + '-' + curso1.horario.horaFin)
+console.log('- ' + curso2.nombre + ' (' + curso2.id + '), ' + curso2.horario.dia + ' ' + curso2.horario.horaInicio + ' a ' + curso2.horario.horaFin + '\n')
 
-// 4. Asignar un profesor a cada curso
+// 4. Crear universidad y agregar los cursos
 const universidad = new Universidad("Universidad Tecnológica Nacional")
 universidad.agregarCursos(curso1)
 universidad.agregarCursos(curso2)
@@ -52,10 +52,10 @@ console.log("\n");
 // 5. Generar un reporte de un estudiante
 const reporte = new Reporte(profesor1)
 console.log("=== GENERACIÓN DE REPORTE ===")
-reporte.generarReporte(estudiante1)
+console.log(reporte.generarReporte(estudiante1))
 
 const reporte2 = new Reporte(profesor2)
 console.log("\n=== GENERACIÓN DE REPORTE ===")
-reporte2.generarReporte(estudiante2)
+console.log(reporte2.generarReporte(estudiante2))
 
 console.log("\n === FIN DEL PROGRAMA ===");

@@ -18,4 +18,11 @@ public class Reporte {
     public void generarReporte(Estudiante estudiante) {
         System.out.println("Reporte del Profesor: " + profesor.getNombre() + ", acerca del Estudiante: " + estudiante.getNombre());
     }
+
+    @Override
+    public String toString() {
+        return "Reporte{" +
+                "profesor=" + profesor +
+                '}';
+    }
 }

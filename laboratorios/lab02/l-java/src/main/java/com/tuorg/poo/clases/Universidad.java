@@ -26,4 +26,12 @@ public class Universidad {
     public ArrayList<Curso> getCursos() {
         return cursos;
     }
+
+    @Override
+    public String toString() {
+        return "Universidad{" +
+                "nombre='" + nombre + '\'' +
+                ", cursos=" + cursos +
+                '}';
+    }
 }

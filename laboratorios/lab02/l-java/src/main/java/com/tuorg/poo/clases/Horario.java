@@ -34,4 +34,13 @@ public class Horario {
     public void setHoraFin(String horaFin) {
         this.horaFin = horaFin;
     }
+
+    @Override
+    public String toString() {
+        return "Horario{" +
+                "dia='" + dia + '\'' +
+                ", horaInicio='" + horaInicio + '\'' +
+                ", horaFin='" + horaFin + '\'' +
+                '}';
+    }
 }

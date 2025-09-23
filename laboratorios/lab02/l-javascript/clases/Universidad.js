@@ -23,4 +23,8 @@ export class Universidad {
   get cursos() {
     return this.cursos
   }
+
+  toString() {
+    return `Universidad{nombre='${this.#nombre}', cursos=${this.cursos}}`
+  }
 }

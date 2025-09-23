@@ -17,4 +17,8 @@ export class Reporte {
     reporte += `, acerca del Estudiante: ${estudiante.nombre}`
     return reporte
   }
+
+  toString() {
+    return `Reporte{profesor=${this.profesor}}`
+  }
 }

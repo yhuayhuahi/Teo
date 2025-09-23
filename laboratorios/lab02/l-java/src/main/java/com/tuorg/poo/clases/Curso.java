@@ -35,4 +35,13 @@ public class Curso {
     public void setHorario(Horario horario) {
         this.horario = horario;
     }
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", horario=" + horario +
+                '}';
+    }
 }
