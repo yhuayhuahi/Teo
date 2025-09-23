@@ -1,0 +1,89 @@
+@startuml
+
+class Persona {
+    -id : string
+    -nombre : string
+    -edad : int
+    --
+    +Persona([id, nombre, edad])
+    .. getters ..
+    +getID() : string
+    +getNombre() : string
+    +getEdad() : int
+    .. setters ..
+    +setID([id])
+    +setNombre([nombre])
+    +setEdad([edad])
+}
+
+class Profesor {
+    +Profesor([id, nombre, edad])
+}
+
+class Estudiante {
+    +Estudiante([id, nombre, edad])
+}
+
+class Horario {
+    +dia : string
+    +horaInicio : string
+    +horaFin : string
+    --
+    +Horario([dia, horaInicio, horaFin])
+    .. getters ..
+    +getDia() : string
+    +getHoraIncio() : string
+    +getHoraFin : string
+    .. setters ..
+    +setDia([dia])
+    +setHoraInicio([horaInicio])
+    +setHorafin([horaFin])
+}
+
+class Curso {
+    -id : string
+    -nombre : string
+    -horario : Horario
+    --
+    +Curso([id, nombre, horario])
+    .. getters ..
+    +getId() : string
+    +getNombre : string
+    +getHorario : Horario
+    .. setters ..
+    +setId([id])
+    +setNombre([nombre])
+    +setHorario([horario])
+}
+
+class Reporte {
+    +profesor : Profesor
+    --
+    Reporte([profesor])
+    getProfesor() : Profesor
+    setProfesor([profesor])
+    .. Dependencia ..
+    generarReporte([estudiante])
+}
+
+class Universidad {
+    -nombre : string
+    +cursos : Curso[]
+    --
+    +Universidad([nombre])
+    +getNombre() : string
+    +setNombre([nombre])
+    +agregarCursos([curso])
+    +getCursos() : Curso[]
+}
+
+Persona --|> Profesor
+Persona --|> Estudiante
+
+Curso --* Horario
+Reporte --> Estudiante
+Reporte --* Profesor
+
+Universidad --o Curso
+
+@enduml
