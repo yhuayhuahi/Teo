@@ -1,13 +1,25 @@
-#include "mainwindow.h"
-#include <QApplication>
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
-int main(int argc, char *argv[])
-{
-    QApplication app(argc, argv);
+#include <QMainWindow>
+#include <QListWidgetItem>
 
-    MainWindow w;
-    w.show();
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
 
-    return app.exec();
-}
+class MainWindow : public QMainWindow {
+    Q_OBJECT
 
+public:
+    explicit MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+private slots:
+    void onColorItemClicked(QListWidgetItem *item);
+
+private:
+    Ui::MainWindow *ui;
+};
+
+#endif // MAINWINDOW_H
