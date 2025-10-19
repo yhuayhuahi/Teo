@@ -1,0 +1,23 @@
+# Archivos de compilación
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Archivos generados por Qt
+*.pro.user
+*.qmake.stash
+*.moc
+moc_*
+ui_*
+qrc_*
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos binarios
+ColorListApp
+ColorListApp.exe
+
