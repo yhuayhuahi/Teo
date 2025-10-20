@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.function.ToDoubleFunction;
 
 public class TrapecioPool {
     static double f(double x) {
@@ -19,9 +20,16 @@ public class TrapecioPool {
         }
 
         public void run() {
-            for (int i = ini; i < fin; i++) {
-                res += 2 * f(a + i * h);
-            }
+            // Función inline para calcular suma parcial
+            ToDoubleFunction<Integer> calcularSumaParcial = rango -> {
+                double suma = 0;
+                for (int i = ini; i < fin; i++) {
+                    suma += 2 * f(a + i * h);
+                }
+                return suma;
+            };
+            
+            res = calcularSumaParcial.applyAsDouble(fin - ini);
         }
     }
 
@@ -62,13 +70,17 @@ public class TrapecioPool {
                 ws[t].start();
             }
 
+            // Función inline para calcular el área final
+            ToDoubleFunction<Double> calcularAreaFinal = sumaTotal -> (h / 2) * sumaTotal;
+
             double suma = f(a) + f(b);
             for (Worker w : ws) {
                 w.join();
                 suma += w.res;
             }
 
-            System.out.printf("Área (Java):" + (h / 2) * suma);
+            double area = calcularAreaFinal.applyAsDouble(suma);
+            System.out.printf("Área (Java): %.6f%n", area);
             
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());

@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.function.ToDoubleFunction;
 
 public class Trapecio{
 
@@ -14,18 +15,23 @@ public class Trapecio{
             
             scanner.close();
 
-            double h = (b - a) / n;  // ancho de cada intervalo
+            // Función inline para calcular el área del trapecio
+            ToDoubleFunction<Integer> calcularArea = divisiones -> {
+                double h = (b - a) / divisiones;  // ancho de cada intervalo
+                
+                // f(x) en los puntos extremos
+                double suma = funcion(a) + funcion(b);
+                
+                // Suma de los puntos intermedios
+                for (int i = 1; i < divisiones; i++) {
+                    double x = a + i * h;
+                    suma += 2 * funcion(x);
+                }
+                
+                return (h / 2) * suma;
+            };
 
-            // f(x) en los puntos a y b
-            double suma = funcion(a) + funcion(b);
-
-            for (int i = 1; i < n; i++) {
-                double x = a + i * h;
-                suma = suma + 2 * funcion(x);
-            }
-
-            double area = (h / 2) * suma;
-
+            double area = calcularArea.applyAsDouble(n);
             System.out.println("El área aproximada es: " + area);
             
         } catch (IllegalArgumentException e) {
