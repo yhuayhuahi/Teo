@@ -50,7 +50,7 @@ public class App {
         // Lista de estudiantes
         List<Student> students = Arrays.asList(student1, student2);
         System.out.println("--- LISTA DE ESTUDIANTES ---");
-        org.example.service.Register.printInformation(students);
+        Register.printInformation(students);
 
         // Lista de profesores
         List<Professor> professors = Arrays.asList(prof1, prof2);
