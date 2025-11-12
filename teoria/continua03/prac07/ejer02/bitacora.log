@@ -1,0 +1,8 @@
+=== INICIO DE BITÁCORA ===
+[2025-11-12 20:13:52] Mensaje desde logger1 - Inicio de aplicación
+[2025-11-12 20:13:52] Mensaje desde logger2 - Operación realizada
+[2025-11-12 20:13:52] Log desde módulo 1 - Procesando datos
+[2025-11-12 20:13:52] Log desde módulo 1 - Datos procesados correctamente
+[2025-11-12 20:13:52] Log desde módulo 2 - Conectando a base de datos
+[2025-11-12 20:13:52] Log desde módulo 2 - Conexión establecida
+[2025-11-12 20:14:20] Segunda ejecución - prueba de persistencia
